@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+  min-width: 800px;
+}
+
+
+
+.service-card, .service-card-error, .service-card-active {
+  font-family: 'Overpass', sans-serif;
+  height: auto;
+  width:calc(100% - 20px);
+  color:darkgray;
+  background-color: #12192c;
+  border-radius: 12px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  transition: all .15s ease;
+  cursor: pointer;
+  border: dashed #12192c;
+}
+
+.service-card-error {
+  border: dashed red;
+}
+
+.service-card-active {
+  border: dashed red;
+  animation: 1s borderAnimOne infinite;
+}
+
+.title{
+  padding: 5px;
+  font-size: 18px;
+  border-bottom: 2px solid #FAD961;
+  color:#fff;
+  background-color: #22293c;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.bodyin {
+  font-size: 12px;
+  padding: 5px;
+}
+.service-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.row{
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  .row{
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+@keyframes borderAnimOne {
+  0% {
+    border-color: #fff;
+  }
+  50% {
+    border-color: #12192c;
+  }
+  100% {
+    border-color: #fff;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {stroke-dashoffset: 0;}
+  to {stroke-dashoffset: 2000;}
+}
+@-moz-keyframes dash {
+  from {stroke-dashoffset: 0;}
+  to {stroke-dashoffset: 2000;}
+}
+@-webkit-keyframes dash {
+  from {stroke-dashoffset: 0;}
+  to {stroke-dashoffset: 2000;}
+}
+@-o-keyframes dash {
+  from {stroke-dashoffset: 0;}
+  to {stroke-dashoffset: 2000;}
+}
+@-ms-keyframes dash {
+  from {stroke-dashoffset: 0;}
+  to {stroke-dashoffset: 2000;}
+}
